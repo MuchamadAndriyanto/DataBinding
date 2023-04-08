@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="product"
+            type="com.example.databinding.ListProduct" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailProduct"
+        app:cardMaxElevation="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/namaProduct"
+                android:text="@{product.name}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/hargaProduct"
+                android:layout_marginTop="10dp"
+                android:text="@{product.harga}"
+                android:layout_below="@id/namaProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/stokBarang"
+                android:layout_marginTop="10dp"
+                android:text="@{product.stok}"
+                android:layout_below="@id/hargaProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/imgProduct"
+                app:imageResource="@{product.img}"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
